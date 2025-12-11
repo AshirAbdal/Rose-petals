@@ -2,10 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Button } from './components/ui/button'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const handleButtonClick = () => {
+    alert("button clicked")
+  }
   return (
     <>
       <div>
@@ -29,6 +32,10 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <span className='text-red-500 flex items-center w-full bg-red-300 justify-center text-center'>testing tailwind</span>
+
+      <div className="flex min-h-svh flex-col items-center justify-center">
+        <Button onClick={handleButtonClick}>Click me</Button>
+      </div>
     </>
   )
 }
